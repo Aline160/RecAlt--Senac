@@ -13,22 +13,24 @@
      <th scope="col">id</th>
      <th scope="col">_id</th>
      <th scope="col">_titulo</th>
+     <th scope="col">_texto</th>
+
 
      </tr>
     </thead>
-
+    <tbody>
     <%lugareslist.forEach(lugares =>{%>
         <tr>
-       <th scope="row">%lugareslist</th>
-       <td><%=lugareslist. titulo</td>
-       <td><%=lugareslist_id </td>
-       </td><%lugareslist_id </td>
-
+       <th scope="row"><%lugares.id%></th>
+        </td><%lugares._id%> </td>
+       <td><%=lugares. titulo%></td>
+       <td><%=lugares.texto %></td>
+       <%})%>
 
 
         </tr>
-            
-
+    </tbody>    
+    </table>
 
 
 

@@ -1,22 +1,32 @@
+const ejs = require('ejs');
 const express=require('express');
 const app = express();
+const bodyParser=require("body-parser");
+var path = require('path');
 
-const livros = require('./routes/recaltRoutes')
-//const connect=require('./database')
+const lugares = require('./routes/recaltRoutes');
+const connect=require('./database');
+const lugaresMongo=('./model/recaltModel');
 
-//connect();
+connect();
 
-app.use(function(req, res, netx) {
+
+app.use(express.json());
+app.use(bodyParser.urlencoded({extended:true}));
+
+app.set('view engine', 'ejs');
+
+
+
+app.use(function(req, res, next) {
     res.header("Access-control-Allow-Origin", "*")
     res.header(
      "Access-control-Allow-headers",
      "origin, x-Requested-with, content-type, Accept"
       )
-      netx()
+      next()
 })
  
-app.get('*', (req,res) => {
-    res.status(404).sendFile('./views/erro.html',{root:__dirname})
-})
+app.use('/lugares',lugares);
  
 module.exports = app

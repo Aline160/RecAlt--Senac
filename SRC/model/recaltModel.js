@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
-const { type } = require('os');
+
  
-const RecaltSchema = new mongoose.Schema({
+const LugaresSchema = new mongoose.Schema({
 id : { type : Number,required:true},
 titulo:{ type : String ,required:true},
-texto:{ type : Number,required:true},
+texto:{ type : String,required:true},
 },{
     versionkey: false
 });
 
-const recalt = mongoose.model('recalt', RecaltSchema);
+const lugaresMongo = mongoose.model('lugares', LugaresSchema);
 
-module.exports = recalt;
+module.exports = lugaresMongo;

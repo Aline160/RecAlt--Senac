@@ -1,0 +1,42 @@
+body{
+    background-color: black;
+}
+
+h1{
+    color: aliceblue;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    margin-left: 30px;
+}
+
+p{
+    color: aliceblue;
+}
+
+button {
+    background-color: white; /* Green */
+    border: none;
+    color:black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-left: 190px;
+    margin-top: 10px;
+    border-radius: 15px;
+}
+
+input{
+    width: 500px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.txt{
+    width:500px;
+    height: 90px;
+}
+
+
+

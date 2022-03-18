@@ -25,45 +25,6 @@
     box-sizing: border-box;
 }
 
-body{
-    color: #2b2d42;
-}
-
-a {
-    text-decoration: none;
-    font-family: 'PT Sans', sans-serif;
-}
-.container{
-    max-width: 1024px;
-    margin: auto;
-}
-
-.nav-brand{
-    font-size: 1.5em;
-    font-weight: bold;
-}
-
-.d-flex{
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.justify-between{
-    justify-content: space-between;
-}
-
-.text-center{
-    text-align: center;
-}
-
-.border-shadow{
-    border: 1px solid var(--border-btn);
-    box-shadow: 1px 3px 10px #e9ecef;
-}
-
-.text-dark{
-    color: var(--dark);
-}
 
 .inline{
     display: inline-block;
@@ -131,6 +92,7 @@ table{
     color: rgb(243, 11, 11);
     background-color: var(--dark) ;
     font-size: 20px;
+    text-align: center;
 }
 
     </style>
@@ -141,9 +103,8 @@ table{
     <thead class="thead-dark">
      <tr>
      <th scope="col">ID</th>
-     <th scope="col">_ID</th>
-     <th scope="col">_Titulo</th>
-     <th scope="col">_Texto</th>
+     <th scope="col">Titulo</th>
+     <th scope="col">Texto</th>
      <th scope="col">Action</th>
      </tr>
     </thead>
@@ -151,11 +112,10 @@ table{
         <%lugareslist.forEach(lugaress =>{%>
         <tr>
             <th scope="row"><%=lugaress.id%></th>
-            <td><%=lugaress._id%></td>
             <td><%=lugaress.titulo%></td>
             <td><%=lugaress.texto%></td>
             <td>
-                <a href="/atualizar" class="btn border-shadow update">
+                <a href="lugares/atualizar" class="btn border-shadow update">
                     <span class="text-gradient"><i class="fas fa-pencil-alt"></i></span>
                 </a>
                 <a class="btn border-shadow delete" >
